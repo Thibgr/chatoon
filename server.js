@@ -13,6 +13,15 @@ io.on('connection', function(socket){
     console.log(socket.id)  
 })
 
+//Change the url for more security
+app.use('/static/css', express.static(__dirname + '/public/css'));
+app.use('/static/js', express.static(__dirname + '/public/js'));
+app.use('/static/images', express.static(__dirname + '/public/images'));
+app.use('/static/fonts', express.static(__dirname + '/public/fonts'));
+
+app.get('/', function(req,res){
+    res.sendFile(__dirname + '/views/index.html');
+});
 
 server.listen(1337);
 console.log('server listening on port 1337')
