@@ -1,0 +1,25 @@
+{
+  "name": "chatoon",
+  "version": "1.0.0",
+  "description": "Special chat for special people",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thibgr/chatoon.git"
+  },
+  "author": "Thibault <contact@thibgr.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thibgr/chatoon/issues"
+  },
+  "homepage": "https://github.com/Thibgr/chatoon#readme"
+}
