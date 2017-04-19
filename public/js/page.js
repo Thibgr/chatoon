@@ -27,7 +27,7 @@ function sendmessage (){
 		return alert('please write something')
 	}
 
-	socket.emit('message', input.value)
+	socket.emit('mess', input.value)
 	input.value =''
 
 }

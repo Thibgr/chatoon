@@ -10,7 +10,16 @@ io.on('connection', function(socket){
     
 // new connection
     console.log('New connection in here')
-    console.log(socket.id)  
+    console.log(socket.id) 
+    
+// Receiving message
+    
+    socket.on('mess', function(message){
+        console.log('received', message)
+        
+        io.emit('newmessage', message)
+    })    
+
 })
 
 //Change the url for more security
