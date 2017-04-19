@@ -11,13 +11,14 @@ socket.on('connect', function(){
 /**
  * Scroll vers le bas de page si l'utilisateur n'est pas remonté pour lire d'anciens messages
  */
+
 function scrollToBottom() {  
   if ($(window).scrollTop() + $(window).height() + 2 * $('#messages li').last().outerHeight() >= $(document).height()) {
     $("html, body, ul").animate({ scrollTop: $(document).height() }, 0);
   }
 }
 
-
+// Send message 
 function sendmessage (){
 	var input = document.getElementsByTagName('input')[0];
 
@@ -27,7 +28,7 @@ function sendmessage (){
 		return alert('please write something')
 	}
 
-	socket.emit('message', input.value)
+	socket.emit('mess', input.value)
 	input.value =''
 
 }

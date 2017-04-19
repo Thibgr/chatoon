@@ -1,14 +1,28 @@
 body{
 	background-color: #575757;
+	padding: 60px;
 }
 main{
 	background: white;
 	border-radius: 15px;
 	margin: 0 auto;
 	width: 436px;
-	height: 658px;
+	height: 638px;
+	padding: 20px;
 }
 ul{
 	height : 440px;
+	overflow-x: hidden;
 	overflow: auto;
+}
+li{
+	font-family: 'Montserrat', sans-serif;
+	background-color: deeppink;
+	margin: 5px;
+	width: 100px;
+}
+#logo {
+	width: 300px;
+	display: block;
+	margin: 0 auto;
 }
