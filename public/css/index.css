@@ -1,8 +1,11 @@
+@import "compass/css3";
+
+
 body{
 	background-color: #575757;
 	padding: 60px;
 }
-main{
+#chatcontainer{
 	background: white;
 	border-radius: 15px;
 	margin: 0 auto;
@@ -10,19 +13,113 @@ main{
 	height: 638px;
 	padding: 20px;
 }
+#menu{
+	height: 638px;
+	border-radius: 15px;
+	background: white;
+	width: 300px;
+}
+#info {
+	height: 638px;
+	border-radius: 15px;
+	background: white;
+	width: 120px;
+}
 ul{
 	height : 440px;
 	overflow-x: hidden;
 	overflow: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 li{
 	font-family: 'Montserrat', sans-serif;
 	background-color: deeppink;
-	margin: 5px;
-	width: 100px;
+	width: 100%;
+	overflow-wrap: break-word;
+	margin-top: 5px;
+	font-size: 14px;
+	line-height: 22px;
+	padding: 15px;
+	box-sizing: border-box;
+	border-radius: 10px;
 }
 #logo {
 	width: 300px;
 	display: block;
 	margin: 0 auto;
 }
+
+#textareamsg{
+	border-radius: 15px;
+	width: 396px;
+	height: 50px;
+	background: blue;
+
+
+}
+
+#sendmsg{
+	
+}
+
+/*/////////////*/
+
+
+a:nth-child(2){
+  display:block;
+  height:25px;
+  width:30px;
+  margin:auto;
+}
+.burger{
+  top:9px;
+}
+.burger, .burger:before, .burger:after{
+  height:5px;
+  display:block;
+  background:#000;
+  width:30px;
+  margin:auto;
+  position:relative;
+  -webkit-transition:all .2s ease;
+  transition:all .2s ease;
+}
+
+.burger:before, .burger:after{
+  content:'';
+  display:block;
+  position:absolute;
+}
+
+.burger:before{
+  top:-9px;
+}
+
+.burger:after{
+  top:9px;
+}
+
+.is-closed{
+  .burger{
+    background:rgba(#000, 0);
+  }
+  .burger:before, .burger:after{
+    opacity:1; 
+  }
+  .burger:before{
+    background:#000;
+      -webkit-transform:rotate(-135deg);
+      transform:rotate(-135deg);
+      top:0px;
+      left:1px
+  }
+  .burger:after{
+    background:#000;
+      -webkit-transform:rotate(135deg);
+      transform:rotate(135deg);
+      top:0px;
+      left:0px
+  }
+}
+
