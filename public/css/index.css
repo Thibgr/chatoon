@@ -78,7 +78,7 @@ a:nth-child(2){
 .burger, .burger:before, .burger:after{
   height:5px;
   display:block;
-  background:#000;
+  background: #575757;
   width:30px;
   margin:auto;
   position:relative;
@@ -100,26 +100,24 @@ a:nth-child(2){
   top:9px;
 }
 
-.is-closed{
-  .burger{
-    background:rgba(#000, 0);
-  }
-  .burger:before, .burger:after{
-    opacity:1; 
-  }
-  .burger:before{
-    background:#000;
-      -webkit-transform:rotate(-135deg);
-      transform:rotate(-135deg);
-      top:0px;
-      left:1px
-  }
-  .burger:after{
-    background:#000;
-      -webkit-transform:rotate(135deg);
-      transform:rotate(135deg);
-      top:0px;
-      left:0px
-  }
+.is-closed .burger {
+  background: transparent;
+}
+.is-closed .burger:before, .is-closed .burger:after {
+  opacity: 1;
+}
+.is-closed .burger:before {
+  background: #575757;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  top: 0px;
+  left: 1px;
+}
+.is-closed .burger:after {
+  background: #575757;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  top: 0px;
+  left: 0px;
 }
 
