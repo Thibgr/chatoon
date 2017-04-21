@@ -5,28 +5,43 @@ body{
 	background-color: #575757;
 	padding: 60px;
 }
+#logo {
+	width: 200px;
+	display: block;
+	margin: 0 auto;
+}
+main{
+	margin: 0 auto;
+    width: 630px;
+}
 #chatcontainer{
 	background: white;
 	border-radius: 15px;
-	margin: 0 auto;
 	width: 436px;
 	height: 638px;
 	padding: 20px;
+    float: right;
+    background-color: white;
 }
 #menu{
-	height: 638px;
+	height: 678px;
 	border-radius: 15px;
 	background: white;
-	width: 300px;
+	width: 150px;
+    background-color: yellow;
 }
 #info {
-	height: 638px;
+	height: 678px;
 	border-radius: 15px;
 	background: white;
 	width: 120px;
+    min-width: 120px;
+    float: left;
+    margin-right: 14px;
+    background-color: white;
 }
 ul{
-	height : 440px;
+	height : 430px;
 	overflow-x: hidden;
 	overflow: auto;
 	margin-top: 20px;
@@ -34,7 +49,7 @@ ul{
 }
 li{
 	font-family: 'Montserrat', sans-serif;
-	background-color: deeppink;
+	background-color: skyblue;
 	width: 100%;
 	overflow-wrap: break-word;
 	margin-top: 5px;
@@ -44,18 +59,13 @@ li{
 	box-sizing: border-box;
 	border-radius: 10px;
 }
-#logo {
-	width: 300px;
-	display: block;
-	margin: 0 auto;
-}
-
 #textareamsg{
-	border-radius: 15px;
-	width: 396px;
-	height: 50px;
-	background: blue;
-
+	border-radius: 10px;
+	width: 350px;
+	height: 30px;
+	background: white;
+    border: 3px blue solid;
+    padding: 8px;
 
 }
 
@@ -63,7 +73,7 @@ li{
 	
 }
 
-/*/////////////*/
+/*BURGER*/
 
 
 a:nth-child(2){
@@ -101,7 +111,7 @@ a:nth-child(2){
 }
 
 .is-closed{
-  .burger{
+    .burger{
     background:rgba(#000, 0);
   }
   .burger:before, .burger:after{
