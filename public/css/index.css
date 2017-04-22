@@ -1,9 +1,22 @@
 @import "compass/css3";
 
 
+/*login*/
+
+#login{
+    width: 100%;
+    background-color: aqua;
+}
+
+#login-logo{
+    width: 400px;
+}
+
+
+/*Chat*/
+
 body{
 	background-color: #575757;
-	padding: 60px;
 }
 #logo {
 	width: 200px;
@@ -11,7 +24,7 @@ body{
 	margin: 0 auto;
 }
 main{
-	margin: 0 auto;
+	margin: 60px auto 0px auto;
     width: 630px;
 }
 #chatcontainer{
@@ -23,13 +36,16 @@ main{
     float: right;
     background-color: white;
 }
+/*
 #menu{
 	height: 678px;
 	border-radius: 15px;
 	background: white;
 	width: 150px;
     background-color: yellow;
+    float: right;
 }
+*/
 #info {
 	height: 678px;
 	border-radius: 15px;
@@ -41,7 +57,7 @@ main{
     background-color: white;
 }
 ul{
-	height : 430px;
+	height : 470px;
 	overflow-x: hidden;
 	overflow: auto;
 	margin-top: 20px;
@@ -64,9 +80,9 @@ li{
 	width: 350px;
 	height: 30px;
 	background: white;
-    border: 3px blue solid;
+    border: 3px #575757 solid;
     padding: 8px;
-
+    outline: none;
 }
 
 #sendmsg{
