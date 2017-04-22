@@ -4,18 +4,30 @@
 	<title>Chatoon</title>
 	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/shake.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
 	
 </head>
 <body>
 	<main>
-    
-	    <section id="info">
+
+		<section id="load">
+			<img id="logochatoon" class="shake-slow shake-constant" src="static/images/logo.svg"/>
+		</section>
+    	
+    	<section id="connect" style="display: none">
+
+    		<input type="text" id="pseudo"/>
+    		<button id="sendpseudo"></button>
+
+    	</section>
+
+	    <section id="info" style="display: none">
 			
 		</section>
 	
 	
-		<section id="chatcontainer">
+		<section id="chatcontainer" style="display: none">
 			<svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 		 viewBox="0 0 265 101" style="enable-background:new 0 0 265 101;" xml:space="preserve">
 			<style type="text/css">
@@ -309,12 +321,14 @@
 			<ul id="messages">
 				
 			</ul>
-			<textarea id="textareamsg" type="text" placeholder="Type..."></textarea>
-			<button id="sendmsg">Send</button>
+			<div id="wrappertext">
+				<textarea id="textareamsg" type="text" placeholder="Type..."></textarea>
+				<button id="sendmsg"></button>
+			</div>
 		</section>	
 	</main>
 	
-	<section id="menu">
+	<section id="menu" style="display: none">
 			
     </section>
 
