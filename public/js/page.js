@@ -3,9 +3,6 @@
 var socket = io('http://localhost:1337');
 
 socket.on('connect', function(){
-	console.log('Nouveau socket !!!')
-	console.log(socket.id); ///G5p5...
-
 });
 
 
@@ -13,6 +10,10 @@ $('a').bind('click', function(event){
   event.preventDefault();
  $(this).toggleClass('is-closed');
 });
+
+
+$('section#load').delay(3000).hide(0);
+$('section#connect').delay(3000).show(0);
 
 
 /**
@@ -25,6 +26,22 @@ function scrollToBottom() {
   }
 }
 
+
+// var pseudo = prompt('Quel est votre pseudo ?');
+// socket.emit('newuser', pseudo);
+
+$('#sendpseudo').click(function(){
+	if ($('#pseudo').val() <= 0){
+	}else {
+		$('section#connect').hide();
+		$('section#chatcontainer').show();
+	}
+})
+
+
+
+
+
 // Send message 
 function sendmessage (){
 	var input = document.getElementsByTagName('textarea')[0];
@@ -32,23 +49,19 @@ function sendmessage (){
 	console.log(input.value)
 
 	if(input.value.length <= 0){
-		return alert('please write something')
+		alert('please write something')
+	}else {
+		socket.emit('mess', input.value)
 	}
-
-	socket.emit('mess', input.value)
-	input.value =''
+	$('textarea').val('').focus();
 
 }
 
 socket.on('response', function(data){
-	console.log('Client : Response received:')
-	console.log(data);
 	scrollToBottom();
 });
 
 socket.on('newmessage', function(newmessage){
-	console.log('newmessage', newmessage )
-
 	var li = document.createElement('li');
 	li.innerHTML = newmessage;
 	document.getElementsByTagName('ul')[0].appendChild(li);
@@ -57,7 +70,7 @@ socket.on('newmessage', function(newmessage){
 })
 
 
-document.getElementsByTagName('button')[0].addEventListener('click', sendmessage)
+document.getElementById('sendmsg').addEventListener('click', sendmessage)
 
 document.addEventListener('keydown', function (e){
 	if (e.keyCode == 13 ){

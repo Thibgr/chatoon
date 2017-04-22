@@ -1,3 +1,4 @@
+
 @import "compass/css3";
 
 
@@ -86,9 +87,44 @@ li{
 }
 
 #sendmsg{
-	
+  border: none;
+  background-image: url(../images/send.png);
+  background-size: 100%;
+  background-color: white;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  background-position: center;
+  margin: 0px;
+  outline: none;
+  padding: 0px;
+  cursor: pointer;
+  margin-left: 20px;
 }
 
+#sendmsg:hover{
+  transform: rotate(12deg);
+}
+
+#wrappertext{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+#load{
+  background-color: red;
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+#logochatoon{
+  width: 400px;
+}
 /*BURGER*/
 
 
@@ -148,3 +184,6 @@ a:nth-child(2){
   left: 0px;
 }
 
+#connect {
+
+}

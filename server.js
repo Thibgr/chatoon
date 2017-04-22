@@ -5,16 +5,25 @@ var io = require('socket.io')(server);
 
 
 // Connection on a room
-io.on('connection', function(socket){ 
+io.on('connection', function(socket, pseudo){ 
     
 // new connection
-    console.log('New connection in here')
-    console.log(socket.id) 
     
+	  // socket.on('newuser', function(pseudo) {
+   //      pseudo = (pseudo);
+   //      socket.pseudo = pseudo;
+   //      socket.broadcast.emit('newuser', pseudo);
+    // });
+
+
 // Receiving message
+
+	// socket.on('mess', function (message) {
+	//         message = (message);
+	//         socket.broadcast.emit('message', {pseudo: socket.pseudo, message: message});
+	//     }); 
     
     socket.on('mess', function(message){
-        console.log('received', message)
         
         io.emit('newmessage', message)
         
