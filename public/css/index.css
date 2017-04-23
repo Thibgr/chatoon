@@ -2,18 +2,45 @@
 @import "compass/css3";
 
 
+/*load*/
+
+#load{
+  background-color: white;
+    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#logochatoon{
+  width: 300px;
+}
+
+
 /*login*/
 
-#login{
-    width: 100%;
-    background-color: aqua;
+#connect{
+  margin-top: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
-
-#login-logo{
-    width: 400px;
+#pseudo{
+    background-color: #575757;
+    border: none;
+    border-bottom: solid 2px white;
+    display: inline;
+    color: white;
+    outline: none;
+    font-size: 24px;
 }
-
-
+#sendpseudo>img{
+    height: 20px;
+}
+#sendpseudo{
+    background: none;
+    border: none;
+}
 /*Chat*/
 
 body{
@@ -22,6 +49,11 @@ body{
 #logo {
 	width: 200px;
 	display: block;
+	margin: 0 auto;
+}
+#logo-chat{
+    width: 200px;
+    display: block;
 	margin: 0 auto;
 }
 main{
@@ -81,7 +113,7 @@ li{
 	width: 350px;
 	height: 30px;
 	background: white;
-    border: 3px #575757 solid;
+    border: 2px #575757 solid;
     padding: 8px;
     outline: none;
 }
@@ -112,21 +144,7 @@ li{
   align-items: center;
 }
 
-
-
-#load{
-  background-color: red;
-  height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center
-}
-
-#logochatoon{
-  width: 400px;
-}
 /*BURGER*/
-
 
 a:nth-child(2){
   display:block;
