@@ -16,6 +16,32 @@ $('section#load').delay(3000).hide(0);
 $('section#connect').delay(3000).show(0);
 
 
+$('#menulogo').click(function(){
+	$('section#menu').toggle(function(){
+		if ($(this).is(':visible')) {}
+        else if ($(this).is(':hidden')) {}
+	});
+});
+
+$('#color1').click(function(){
+	$('body').css("background-color", "skyblue")
+})
+$('#color2').click(function(){
+	$('body').css("background-color", "yellow")
+})
+$('#color3').click(function(){
+	$('body').css("background-color", "grey")
+})
+$('#color4').click(function(){
+	$('body').css("background-color", "red")
+})
+$('#color5').click(function(){
+	$('body').css("background-color", "black")
+})
+$('#color6').click(function(){
+	$('body').css("background-color", "deeppink")
+})
+
 /**
  * Scroll vers le bas de page si l'utilisateur n'est pas remonté pour lire d'anciens messages
  */
@@ -26,21 +52,19 @@ function scrollToBottom() {
   }
 }
 
+var pseudo;
 
 // var pseudo = prompt('Quel est votre pseudo ?');
 // socket.emit('newuser', pseudo);
 
 $('#sendpseudo').click(function(){
 	if ($('#pseudo').val() <= 0){
-	}else {
+	}else { 
+		pseudo = $('#pseudo').val();
 		$('section#connect').hide();
 		$('section#chatcontainer').show();
 	}
 })
-
-
-
-
 
 // Send message 
 function sendmessage (){
@@ -51,7 +75,10 @@ function sendmessage (){
 	if(input.value.length <= 0){
 		alert('please write something')
 	}else {
-		socket.emit('mess', input.value)
+		socket.emit('mess', {
+			pseudo: pseudo,
+			message: input.value
+		})
 	}
 	$('textarea').val('').focus();
 
@@ -62,11 +89,12 @@ socket.on('response', function(data){
 });
 
 socket.on('newmessage', function(newmessage){
-	var li = document.createElement('li');
-	li.innerHTML = newmessage;
-	document.getElementsByTagName('ul')[0].appendChild(li);
+	var bubble = [
+	'<h2>'+newmessage.pseudo+'</h2>'+
+	'<li>'+newmessage.message+'</li>'
+	].join();
+	$('ul').append(bubble);
 	scrollToBottom();
-
 })
 
 
@@ -77,9 +105,6 @@ document.addEventListener('keydown', function (e){
 		sendmessage()
 	}
 })
-
-
-
 
 
 

@@ -23,9 +23,12 @@ io.on('connection', function(socket, pseudo){
 	//         socket.broadcast.emit('message', {pseudo: socket.pseudo, message: message});
 	//     }); 
     
-    socket.on('mess', function(message){
+    socket.on('mess', function(data){
         
-        io.emit('newmessage', message)
+        io.emit('newmessage', {
+        	pseudo: data.pseudo,
+        	message: data.message
+        })
         
         })
 })
