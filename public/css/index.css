@@ -1,8 +1,9 @@
+
 /*load*/
 
 #load{
   background-color: white;
-    width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -37,11 +38,11 @@
     font-size: 24px;
 }
 #sendpseudo>img{
-    height: 20px;
+  height: 20px;
 }
 #sendpseudo{
-    background: none;
-    border: none;
+  background: none;
+ border: none;
 }
 #logo-container{
     width: 200px;
@@ -73,14 +74,15 @@ body{
 	display: block;
 	margin: 0 auto;
 }
-img#logo-chat{
-    width: 200px;
-    display: block;
-	margin: 0 auto;
+
+#logo-chat{
+  width: 200px;
+  display: block;
+  margin: 0 auto;
 }
 main{
 	margin: 60px auto 0px auto;
-    width: 630px;
+  width: 630px;
 }
 #chatcontainer{
 	background: white;
@@ -109,10 +111,10 @@ main{
 	border-radius: 15px;
 	background: white;
 	width: 120px;
-    min-width: 120px;
-    float: left;
-    margin-right: 14px;
-    background-color: white;
+  min-width: 120px;
+  float: left;
+  margin-right: 14px;
+  background-color: white;
 }
 ul{
 	height : 440px;
@@ -124,11 +126,12 @@ ul{
 h2{
   font-family: 'Roboto', sans-serif;
   font-size: 400;
+  margin-top: 5px;
 }
 li{
 	font-family: 'Roboto', sans-serif;
   font-size: 300;
-	background-color: skyblue;
+	background-color: #C7C7C7;
 	width: 100%;
 	overflow-wrap: break-word;
 	margin-top: 5px;

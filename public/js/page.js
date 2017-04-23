@@ -12,7 +12,11 @@ $('a').bind('click', function(event){
 });
 
 
-$('#emot1').click(function(){
+
+$('#wrapper-emoji').on('click', 'img', function(){
+	var emote = $(this).attr('id');
+	$('#textareamsg').val('<img class="emoji" src="static/images/'+emote+'.png">');
+	$('#sendmsg').click();
 })
 
 $('section#load').delay(3000).hide(0);
@@ -27,22 +31,31 @@ $('#menulogo').click(function(){
 });
 
 $('#color1').click(function(){
-	$('body').css("background-color", "skyblue")
+//	$('li').removeClass('grey red green blue yellow pink')
+//	$('li').addClass('pink')
+	$('body').css("background-color", "#CC00BA")
+	$('li').css("background-color", "#FF5AF0")
 })
 $('#color2').click(function(){
-	$('body').css("background-color", "yellow")
+	$('body').css("background-color", "#4DC5CC")
+	$('li').css("background-color", "#ACFBFF")
+
 })
 $('#color3').click(function(){
-	$('body').css("background-color", "grey")
+	$('body').css("background-color", "#46CC4C")
+	$('li').css("background-color", "#A4FFA8")
 })
 $('#color4').click(function(){
-	$('body').css("background-color", "red")
+	$('body').css("background-color", "#FFF341")
+	$('li').css("background-color", "#FFF88D")
 })
 $('#color5').click(function(){
-	$('body').css("background-color", "black")
+	$('body').css("background-color", "#7F210A")
+	$('li').css("background-color", "#FF8061")
 })
 $('#color6').click(function(){
-	$('body').css("background-color", "deeppink")
+	$('body').css("background-color", "#575757")
+	$('li').css("background-color", "#C7C7C7")
 })
 
 /**
