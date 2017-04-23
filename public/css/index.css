@@ -240,7 +240,7 @@ a:nth-child(2){
 /*colors*/
 
 #color1{
-    background-color: pink;
+    background-color: #CC00BA;
     width: 15px;
     height: 120px;
     border: none;
@@ -248,7 +248,7 @@ a:nth-child(2){
     border-radius: 5px;
     margin-left: 3px;
 }#color2{
-    background-color: pink;
+    background-color: #4DC5CC;
     width: 15px;
     height: 120px;
     border: none;
@@ -256,7 +256,7 @@ a:nth-child(2){
     border-radius: 5px;
     margin-left: 3px;
 }#color3{
-    background-color: pink;
+    background-color: #46CC4C;
     width: 15px;
     height: 120px;
     border: none;
@@ -264,7 +264,7 @@ a:nth-child(2){
     border-radius: 5px;
     margin-left: 3px;
 }#color4{
-    background-color: pink;
+    background-color: #FFF341;
     width: 15px;
     height: 120px;
     border: none;
@@ -272,7 +272,7 @@ a:nth-child(2){
     border-radius: 5px;
     margin-left: 3px;
 }#color5{
-    background-color: pink;
+    background-color: #7F210A;
     width: 15px;
     height: 120px;
     border: none;
@@ -280,7 +280,7 @@ a:nth-child(2){
     border-radius: 5px;
     margin-left: 3px;
 }#color6{
-    background-color: pink;
+    background-color: #575757;
     width: 15px;
     height: 120px;
     border: none;
