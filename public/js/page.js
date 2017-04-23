@@ -12,6 +12,10 @@ $('a').bind('click', function(event){
 });
 
 
+$('#emot1').click(function(){
+	var emot =
+})
+
 $('section#load').delay(3000).hide(0);
 $('section#connect').delay(3000).show(0);
 
@@ -70,8 +74,6 @@ $('#sendpseudo').click(function(){
 function sendmessage (){
 	var input = document.getElementsByTagName('textarea')[0];
 
-	console.log(input.value)
-
 	if(input.value.length <= 0){
 		alert('please write something')
 	}else {
@@ -101,8 +103,10 @@ socket.on('newmessage', function(newmessage){
 document.getElementById('sendmsg').addEventListener('click', sendmessage)
 
 document.addEventListener('keydown', function (e){
-	if (e.keyCode == 13 ){
-		sendmessage()
+	if (e.keyCode === 13 ){
+		event.preventDefault();
+		sendmessage();
+		$('#sendpseudo').click();
 	}
 })
 
