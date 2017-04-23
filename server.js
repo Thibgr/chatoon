@@ -7,25 +7,12 @@ var io = require('socket.io')(server);
 // Connection on a room
 io.on('connection', function(socket, pseudo){ 
     
-// new connection
-    
-	  // socket.on('newuser', function(pseudo) {
-   //      pseudo = (pseudo);
-   //      socket.pseudo = pseudo;
-   //      socket.broadcast.emit('newuser', pseudo);
-    // });
-
-
-// Receiving message
-
-	// socket.on('mess', function (message) {
-	//         message = (message);
-	//         socket.broadcast.emit('message', {pseudo: socket.pseudo, message: message});
-	//     }); 
-    
-    socket.on('mess', function(message){
+    socket.on('mess', function(data){
         
-        io.emit('newmessage', message)
+        io.emit('newmessage', {
+        	pseudo: data.pseudo,
+        	message: data.message
+        })
         
         })
 })

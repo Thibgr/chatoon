@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Chatoon</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/index.css">
 	<link rel="stylesheet" type="text/css" href="/static/css/shake.css">
@@ -13,6 +14,8 @@
             var FullBodyHeight = function() {
                   $('#load').css('height', window.innerHeight);
                   $('#load').css('max-height', window.innerHeight);
+                  $('#connect').css('height', window.innerHeight);
+                  $('#connect').css('max-height', window.innerHeight);
 			}
             
             setInterval(FullBodyHeight, 0);
@@ -27,10 +30,14 @@
 </section>    
 
 <section id="connect" style="display: none">
-    <input type="text" id="pseudo" placeholder="GIVE UR BLAZ" autofocus/>
+  
+   <h2>Choisis ton pseudo :</h2>
+    <div id="input-log">
+    <input type="text" id="pseudo" placeholder="Pseudonyme..." autofocus/>
     <button id="sendpseudo">
         <img src="static/images/arrow.svg" alt="">
     </button>
+    </div>
 </section>
 		
 	<main>
@@ -40,22 +47,96 @@
 			
 		</section>
 	
-	
-		<section id="chatcontainer" style="display: none" >
-			<img src="/static/images/logo.svg" alt="logo" id="logo-chat">
+
+		<section id="chatcontainer" style="display: none">
+			<div id="header-container">
+                <a href='#' id="menulogo">
+                    <div class="burger"></div>
+                </a> 
+                
+                 <img src="/static/images/logo.svg" alt="logo" id="logo-container">
+            </div>
 
 			<ul id="messages">
 				
 			</ul>
 			<div id="wrappertext">
-				<textarea id="textareamsg" type="text" placeholder="Type..."></textarea>
+				<textarea id="textareamsg" type="text" placeholder="Type..." autofocus></textarea>
 				<button id="sendmsg"></button>
 			</div>
 		</section>	
 	</main>
 	
+
 	<section id="menu" style="display: none">
-			
+
+		<img id="emot1" class="emoji" src="static/images/emoji1.png">
+		<img class="emoji" src="static/images/emoji2.png">
+		<img class="emoji" src="static/images/emoji3.png">
+		<img class="emoji" src="static/images/emoji4.png">
+		<img class="emoji" src="static/images/emoji5.png">
+		<img class="emoji" src="static/images/emoji6.png">
+		<img class="emoji" src="static/images/emoji7.png">
+		<img class="emoji" src="static/images/emoji8.png">
+		<img class="emoji" src="static/images/emoji9.png">
+		<img class="emoji" src="static/images/emoji10.png">
+		<img class="emoji" src="static/images/emoji11.png">
+		<img class="emoji" src="static/images/emoji12.png">
+		<img class="emoji" src="static/images/emoji13.png">
+		<img class="emoji" src="static/images/emoji14.png">
+		<img class="emoji" src="static/images/emoji15.png">
+		<img class="emoji" src="static/images/emoji16.png">
+		<img class="emoji" src="static/images/emoji17.png">
+		<img class="emoji" src="static/images/emoji18.png">
+		<img class="emoji" src="static/images/emoji19.png">
+		<img class="emoji" src="static/images/emoji20.png">
+		<img class="emoji" src="static/images/emoji21.png">
+		<img class="emoji" src="static/images/emoji22.png">
+		<img class="emoji" src="static/images/emoji23.png">
+		<img class="emoji" src="static/images/emoji24.png">
+		<img class="emoji" src="static/images/emoji25.png">
+		<img class="emoji" src="static/images/emoji26.png">
+		<img class="emoji" src="static/images/emoji27.png">
+		<img class="emoji" src="static/images/emoji28.png">
+		<img class="emoji" src="static/images/emoji29.png">
+		<img class="emoji" src="static/images/emoji30.png">
+		<img class="emoji" src="static/images/emoji31.png">
+		<img class="emoji" src="static/images/emoji32.png">
+		<img class="emoji" src="static/images/emoji33.png">
+		<img class="emoji" src="static/images/emoji34.png">
+		<img class="emoji" src="static/images/emoji35.png">
+		<img class="emoji" src="static/images/emoji33.png">
+		<img class="emoji" src="static/images/emoji34.png">
+		<img class="emoji" src="static/images/emoji35.png">
+		<img class="emoji" src="static/images/emoji36.png">
+		<img class="emoji" src="static/images/emoji37.png">
+		<img class="emoji" src="static/images/emoji38.png">
+		<img class="emoji" src="static/images/emoji39.png">
+		<img class="emoji" src="static/images/emoji40.png">
+		<img class="emoji" src="static/images/emoji41.png">
+		<img class="emoji" src="static/images/emoji42.png">
+		<img class="emoji" src="static/images/emoji43.png">
+		<img class="emoji" src="static/images/emoji44.png">
+		<img class="emoji" src="static/images/emoji45.png">
+		<img class="emoji" src="static/images/emoji46.png">
+		<img class="emoji" src="static/images/emoji47.png">
+		<img class="emoji" src="static/images/emoji48.png">
+		<img class="emoji" src="static/images/emoji49.png">
+		<img class="emoji" src="static/images/emoji50.png">
+		<img class="emoji" src="static/images/emoji51.png">
+		<img class="emoji" src="static/images/emoji52.png">
+		<img class="emoji" src="static/images/emoji53.png">
+		<img class="emoji" src="static/images/emoji54.png">
+		<img class="emoji" src="static/images/emoji55.png">
+		<img class="emoji" src="static/images/emoji56.png">
+		<img class="emoji" src="static/images/emoji57.png">
+   
+        <button id="color1"></button>
+		<button id="color2"></button>
+		<button id="color3"></button>
+		<button id="color4"></button>
+		<button id="color5"></button>
+		<button id="color6"></button>
     </section>
 
 	<script src="/static/js/page.js"></script>
