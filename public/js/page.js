@@ -11,8 +11,8 @@ $('#wrapper-emoji').on('click', 'img', function(){
 
 // SECTION ANIMATION LOGO BEGINING
 
-$('section#load').delay(3000).hide(0);
-$('section#connect').delay(3000).show(0);
+$('section#load').delay(3000).hide(0)
+$('section#connect').delay(3000).fadeIn(1000);
 
 
 // FUNCTION MENU BURGER
@@ -97,7 +97,6 @@ function sendmessage (){
 		})
 	}
 	$('textarea').val('').focus();
-
 }
 
 socket.on('response', function(data){
@@ -107,7 +106,7 @@ socket.on('response', function(data){
 socket.on('newmessage', function(newmessage){
 	var bubble = [
 	'<h2>'+newmessage.pseudo+'</h2>'+
-	'<li >'+newmessage.message+'</li>'
+	'<li>'+newmessage.message+'</li>'
 	].join();
 	$('ul').append(bubble);
 	$('#messages').scrollTop($('#messages')[0].scrollHeight); // AUTOMATIC SCROLL
