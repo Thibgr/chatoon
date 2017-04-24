@@ -3,7 +3,8 @@
 
 body{
 	background-color: #575757;
-    overflow: hidden
+  overflow: hidden;
+  position:relative;
 }
 
 /*load*/
@@ -20,11 +21,22 @@ body{
     width: 300px;
 }
 
+#catgif{
+  position: absolute;
+  height: 200px;
+  -webkit-animation: walk 3s;
+}
+
+@-webkit-keyframes walk {
+    0%  {right: -10%;}
+    100%{right: 110%;} 
+}
+
 /*login*/
 
 @font-face {
   font-family: 'Lobster';
-  src: url('/static/font/Lobster-Regular.ttf');
+  src: url('/static/fonts/Lobster-Regular.ttf');
 }
 
 #connect{
@@ -296,7 +308,8 @@ a:nth-child(2){
   margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color2{
+}
+#color2{
   background-color: #4DC5CC;
   width: 15px;
   height: 120px;
@@ -304,7 +317,8 @@ a:nth-child(2){
   margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color3{
+}
+#color3{
   background-color: #46CC4C;
   width: 15px;
   height: 120px;
@@ -312,7 +326,8 @@ a:nth-child(2){
   margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color4{
+}
+#color4{
   background-color: #FFF341;
   width: 15px;
   height: 120px;
@@ -320,7 +335,8 @@ a:nth-child(2){
   margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color5{
+}
+#color5{
   background-color: #FF8061;
   width: 15px;
   height: 120px;
@@ -328,7 +344,8 @@ a:nth-child(2){
   margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color6{
+}
+#color6{
   background-color: #575757;
   width: 15px;
   height: 120px;

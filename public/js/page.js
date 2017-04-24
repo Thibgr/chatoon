@@ -15,6 +15,14 @@ $('#wrapper-emoji').on('click', 'img', function(){
 $('section#load').delay(3000).hide(0)
 $('section#connect').delay(3000).fadeIn(1000);
 
+// EASTER EGG CLICK ON LOAD APPEAR CAT
+
+$('section#load').click(function(){
+	if ($(this).is(':visible')) {
+		$('#catgif').show();
+	}
+})
+
 
 // FUNCTION MENU BURGER
 
