@@ -133,7 +133,7 @@ main{
 }
 */
 ul{
-	height : 440px;
+	height : 470px;
 	overflow-x: hidden;
 	overflow: auto;
 	margin-top: 20px;
@@ -200,20 +200,28 @@ li{
     width: 30px;
 }
 #menu{
-	height: 658px;
+	height: 618px;
 	border-radius: 15px;
 	background: white;
     margin-right: 20px;
 	width: 140px;
     background-color: white;
     float: right;
-    padding: 10px;
+    padding: 30px 10px;
+    text-align: center;
+}
+
+h3{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: 'lobster';
+    color: #C7C7C7;
     text-align: center;
 }
 /* COLOR */
 
-body.color1{ background-color: #CC00BA ; }
-body.color1 li { background-color: #FF5AF0 ; }
+body.color1{ background-color: deeppink; }
+body.color1 li { background-color: lightpink; }
 
 body.color2{ background-color: #4DC5CC ; }
 body.color2 li { background-color: #ACFBFF ; }
@@ -289,51 +297,62 @@ a:nth-child(2){
 /*color theme*/
 
 #color1{
-  background-color: #CC00BA;
+  background-color: deeppink;
   width: 15px;
-  height: 120px;
+  height: 15px;
   border: none;
-  margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color2{
+  outline: none;
+  cursor: pointer;
+}
+#color2{
   background-color: #4DC5CC;
   width: 15px;
-  height: 120px;
+  height: 15px;
   border: none;
-  margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color3{
+  outline: none;
+  cursor: pointer;
+}
+#color3{
   background-color: #46CC4C;
   width: 15px;
-  height: 120px;
+  height: 15px;
   border: none;
-  margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color4{
+  outline: none;
+  cursor: pointer;
+}
+#color4{
   background-color: #FFF341;
   width: 15px;
-  height: 120px;
+  height: 15px;
   border: none;
-  margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color5{
+  outline: none;
+  cursor: pointer;
+}
+#color5{
   background-color: #FF8061;
   width: 15px;
-  height: 120px;
+  height: 15px;
   border: none;
-  margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
-}#color6{
+  outline: none;
+  cursor: pointer;
+}
+#color6{
   background-color: #575757;
   width: 15px;
-  height: 120px;
+  height: 15px;
   border: none;
-  margin-top: 20px;
   border-radius: 5px;
   margin-left: 3px;
+  outline: none;
+  cursor: pointer;
 }
