@@ -1,17 +1,7 @@
-// script for socket client
-
 var socket = io('http://localhost:8080');
+var pseudo;
 
-socket.on('connect', function(){
-});
-
-
-$('a').bind('click', function(event){
-  event.preventDefault();
- $(this).toggleClass('is-closed');
-});
-
-
+// FUNCTION SEND EMOJI
 
 $('#wrapper-emoji').on('click', 'img', function(){
 	var emote = $(this).attr('id');
@@ -19,9 +9,18 @@ $('#wrapper-emoji').on('click', 'img', function(){
 	$('#sendmsg').click();
 })
 
+// SECTION ANIMATION LOGO BEGINING
+
 $('section#load').delay(3000).hide(0);
 $('section#connect').delay(3000).show(0);
 
+
+// FUNCTION MENU BURGER
+
+$('a').bind('click', function(event){
+  event.preventDefault();
+ $(this).toggleClass('is-closed');
+});
 
 $('#menulogo').click(function(){
 	$('section#menu').toggle(function(){
@@ -30,48 +29,47 @@ $('#menulogo').click(function(){
 	});
 });
 
-$('#color1').click(function(){
-//	$('li').removeClass('grey red green blue yellow pink')
-//	$('li').addClass('pink')
-	$('body').css("background-color", "#CC00BA")
-	$('li').css("background-color", "#FF5AF0")
-})
-$('#color2').click(function(){
-	$('body').css("background-color", "#4DC5CC")
-	$('li').css("background-color", "#ACFBFF")
 
-})
-$('#color3').click(function(){
-	$('body').css("background-color", "#46CC4C")
-	$('li').css("background-color", "#A4FFA8")
-})
-$('#color4').click(function(){
-	$('body').css("background-color", "#FFF341")
-	$('li').css("background-color", "#FFF88D")
-})
-$('#color5').click(function(){
-	$('body').css("background-color", "#7F210A")
-	$('li').css("background-color", "#FF8061")
-})
-$('#color6').click(function(){
-	$('body').css("background-color", "#575757")
-	$('li').css("background-color", "#C7C7C7")
-})
+// FUNCTION CHANGE COLOR THEME
 
-/**
- * Scroll vers le bas de page si l'utilisateur n'est pas remonté pour lire d'anciens messages
- */
+$("#color1").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
 
-function scrollToBottom() {  
-  if ($(window).scrollTop() + $(window).height() + 2 * $('#messages li').last().outerHeight() >= $(document).height()) {
-    $("html, body, ul").animate({ scrollTop: $(document).height() }, 0);
-  }
-}
+$("#color2").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
 
-var pseudo;
+$("#color3").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
 
-// var pseudo = prompt('Quel est votre pseudo ?');
-// socket.emit('newuser', pseudo);
+$("#color4").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
+
+$("#color5").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
+
+$("#color6").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
+
+
+// FUNCTION LOGIN PSEUDO
 
 $('#sendpseudo').click(function(){
 	if ($('#pseudo').val() <= 0){
@@ -82,7 +80,12 @@ $('#sendpseudo').click(function(){
 	}
 })
 
-// Send message 
+// SCRIPT FOR SOCKET
+// SEND MESSAGE
+
+socket.on('connect', function(){
+});
+
 function sendmessage (){
 	var input = document.getElementsByTagName('textarea')[0];
 
@@ -98,20 +101,22 @@ function sendmessage (){
 }
 
 socket.on('response', function(data){
-	scrollToBottom();
+	$('#messages').scrollTop($('#messages')[0].scrollHeight); // AUTOMATIC SCROLL
 });
 
 socket.on('newmessage', function(newmessage){
 	var bubble = [
 	'<h2>'+newmessage.pseudo+'</h2>'+
-	'<li>'+newmessage.message+'</li>'
+	'<li >'+newmessage.message+'</li>'
 	].join();
 	$('ul').append(bubble);
-	scrollToBottom();
+	$('#messages').scrollTop($('#messages')[0].scrollHeight); // AUTOMATIC SCROLL
 })
 
 
 document.getElementById('sendmsg').addEventListener('click', sendmessage)
+
+// SCRIPT KEYPRESS ENTER
 
 document.addEventListener('keydown', function (e){
 	if (e.keyCode === 13 ){
@@ -120,7 +125,3 @@ document.addEventListener('keydown', function (e){
 		$('#sendpseudo').click();
 	}
 })
-
-
-
-
