@@ -1,17 +1,9 @@
-// script for socket client
+// PUBLIC VAR
 
-var socket = io('http://localhost:1337');
+var socket = io('http://localhost:8080');
+var pseudo;
 
-socket.on('connect', function(){
-});
-
-
-$('a').bind('click', function(event){
-  event.preventDefault();
- $(this).toggleClass('is-closed');
-});
-
-
+// FUNCTION SEND EMOJI
 
 $('#wrapper-emoji').on('click', 'img', function(){
 	var emote = $(this).attr('id');
@@ -19,9 +11,18 @@ $('#wrapper-emoji').on('click', 'img', function(){
 	$('#sendmsg').click();
 })
 
+// SECTION ANIMATION LOGO BEGINING
+
 $('section#load').delay(3000).hide(0);
 $('section#connect').delay(3000).show(0);
 
+
+// FUNCTION MENU BURGER
+
+$('a').bind('click', function(event){
+  event.preventDefault();
+ $(this).toggleClass('is-closed');
+});
 
 $('#menulogo').click(function(){
 	$('section#menu').toggle(function(){
@@ -30,11 +31,13 @@ $('#menulogo').click(function(){
 	});
 });
 
+// FUNCTION CHANGE COLOR THEME
+
 $('#color1').click(function(){
-//	$('li').removeClass('grey red green blue yellow pink')
-//	$('li').addClass('pink')
+	$('li').removeClass('grey red green blue yellow pink')
+	$('li').addClass('pink')
 	$('body').css("background-color", "#CC00BA")
-	$('li').css("background-color", "#FF5AF0")
+	// $('li').css("background-color", "#FF5AF0")
 })
 $('#color2').click(function(){
 	$('body').css("background-color", "#4DC5CC")
@@ -58,20 +61,8 @@ $('#color6').click(function(){
 	$('li').css("background-color", "#C7C7C7")
 })
 
-/**
- * Scroll vers le bas de page si l'utilisateur n'est pas remonté pour lire d'anciens messages
- */
 
-function scrollToBottom() {  
-  if ($(window).scrollTop() + $(window).height() + 2 * $('#messages li').last().outerHeight() >= $(document).height()) {
-    $("html, body, ul").animate({ scrollTop: $(document).height() }, 0);
-  }
-}
-
-var pseudo;
-
-// var pseudo = prompt('Quel est votre pseudo ?');
-// socket.emit('newuser', pseudo);
+// FUNCTION LOGIN PSEUDO
 
 $('#sendpseudo').click(function(){
 	if ($('#pseudo').val() <= 0){
@@ -82,7 +73,12 @@ $('#sendpseudo').click(function(){
 	}
 })
 
-// Send message 
+// SCRIPT FOR SOCKET
+// SEND MESSAGE
+
+socket.on('connect', function(){
+});
+
 function sendmessage (){
 	var input = document.getElementsByTagName('textarea')[0];
 
@@ -98,20 +94,22 @@ function sendmessage (){
 }
 
 socket.on('response', function(data){
-	scrollToBottom();
+	$('#messages').scrollTop($('#messages')[0].scrollHeight); // AUTOMATIC SCROLL
 });
 
 socket.on('newmessage', function(newmessage){
 	var bubble = [
 	'<h2>'+newmessage.pseudo+'</h2>'+
-	'<li>'+newmessage.message+'</li>'
+	'<li >'+newmessage.message+'</li>'
 	].join();
 	$('ul').append(bubble);
-	scrollToBottom();
+	$('#messages').scrollTop($('#messages')[0].scrollHeight); // AUTOMATIC SCROLL
 })
 
 
 document.getElementById('sendmsg').addEventListener('click', sendmessage)
+
+// SCRIPT KEYPRESS ENTER
 
 document.addEventListener('keydown', function (e){
 	if (e.keyCode === 13 ){
@@ -120,7 +118,3 @@ document.addEventListener('keydown', function (e){
 		$('#sendpseudo').click();
 	}
 })
-
-
-
-

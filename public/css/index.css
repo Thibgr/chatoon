@@ -1,5 +1,5 @@
 
-/*load*/
+/* LOADS */
 
 #load{
   background-color: white;
@@ -20,51 +20,51 @@
 /*login*/
 
 #connect{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #input-log{
-    display: inline-flex;
-    flex-direction: row;
+  display: inline-flex;
+  flex-direction: row;
 }
 #pseudo{
-    background-color: #575757;
-    border: none;
-    border-bottom: solid 2px white;
-    color: white;
-    outline: none;
-    font-size: 24px;
+  background-color: #575757;
+  border: none;
+  border-bottom: solid 2px white;
+  color: white;
+  outline: none;
+  font-size: 24px;
 }
 #sendpseudo>img{
   height: 20px;
 }
 #sendpseudo{
   background: none;
- border: none;
+  border: none;
 }
 #logo-container{
-    width: 200px;
-    margin: 0 auto;
-    display: block;
+  width: 200px;
+  margin: 0 auto;
+  display: block;
 }
 #connect>h2 {
-    color: white;
-    font-weight: 100;
-    margin-bottom: 20px;
-    font-size: 20px;
-    text-transform: uppercase;
+  color: white;
+  font-weight: 100;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 #header-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
 }
-/*Chat*/
+/* CHAT */
 
 body{
 	background-color: #575757;
@@ -74,7 +74,6 @@ body{
 	display: block;
 	margin: 0 auto;
 }
-
 #logo-chat{
   width: 200px;
   display: block;
@@ -90,20 +89,20 @@ main{
 	width: 436px;
 	height: 638px;
 	padding: 20px;
-    float: right;
-    background-color: white;
+  float: right;
+  background-color: white;
 }
 
 #menu{
 	height: 658px;
 	border-radius: 15px;
 	background: white;
-    margin-right: 20px;
+  margin-right: 20px;
 	width: 140px;
-    background-color: white;
-    float: right;
-    padding: 10px;
-    text-align: center;
+  background-color: white;
+  float: right;
+  padding: 10px;
+  text-align: center;
 }
 
 #info {
@@ -177,12 +176,11 @@ li{
   align-items: center;
 }
 
-/*BURGER*/
+/* MENU BURGER */
 
 #menulogo{
-    margin-top: 10px;
+  margin-top: 10px;
 }
-
 a:nth-child(2){
   display:block;
   height:25px;
@@ -193,7 +191,7 @@ a:nth-child(2){
   top:9px;
 }
 .burger, .burger:before, .burger:after{
-  height:5px;
+  height:4px;
   display:block;
   background: #575757;
   width:30px;
@@ -202,22 +200,17 @@ a:nth-child(2){
   -webkit-transition:all .2s ease;
   transition:all .2s ease;
 }
-
 .burger:before, .burger:after{
   content:'';
   display:block;
   position:absolute;
 }
-
 .burger:before{
   top:-9px;
 }
-
 .burger:after{
   top:9px;
 }
-
-
 .is-closed .burger {
   background: transparent;
 }
@@ -240,54 +233,54 @@ a:nth-child(2){
 }
 
 
-/*colors*/
+/* COLORS */
 
 #color1{
-    background-color: #CC00BA;
-    width: 15px;
-    height: 120px;
-    border: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    margin-left: 3px;
+  background-color: #CC00BA;
+  width: 15px;
+  height: 120px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-left: 3px;
 }#color2{
-    background-color: #4DC5CC;
-    width: 15px;
-    height: 120px;
-    border: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    margin-left: 3px;
+  background-color: #4DC5CC;
+  width: 15px;
+  height: 120px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-left: 3px;
 }#color3{
-    background-color: #46CC4C;
-    width: 15px;
-    height: 120px;
-    border: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    margin-left: 3px;
+  background-color: #46CC4C;
+  width: 15px;
+  height: 120px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-left: 3px;
 }#color4{
-    background-color: #FFF341;
-    width: 15px;
-    height: 120px;
-    border: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    margin-left: 3px;
+  background-color: #FFF341;
+  width: 15px;
+  height: 120px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-left: 3px;
 }#color5{
-    background-color: #7F210A;
-    width: 15px;
-    height: 120px;
-    border: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    margin-left: 3px;
+  background-color: #7F210A;
+  width: 15px;
+  height: 120px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-left: 3px;
 }#color6{
-    background-color: #575757;
-    width: 15px;
-    height: 120px;
-    border: none;
-    margin-top: 20px;
-    border-radius: 5px;
-    margin-left: 3px;
+  background-color: #575757;
+  width: 15px;
+  height: 120px;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-left: 3px;
 }
