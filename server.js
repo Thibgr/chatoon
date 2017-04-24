@@ -9,16 +9,19 @@ var io = require('socket.io')(server);
 // CONNECTION ON CHAT
 io.on('connection', function(socket, pseudo){ 
     
+    socket.on('user', function (data){
+        	console.log(data);
+        	io.emit('user', data);
+})
+
     socket.on('mess', function(data){
-        
+        console.log(data);
         io.emit('newmessage', {
         	pseudo: data.pseudo,
         	message: data.message
-        })
-        
-        })
+        }) 
+    })  
 })
-
 
 // SECURITY SCRIPT 
 
