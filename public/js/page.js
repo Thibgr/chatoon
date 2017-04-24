@@ -1,6 +1,6 @@
 // script for socket client
 
-var socket = io('http://localhost:1337');
+var socket = io('http://localhost:8080');
 
 socket.on('connect', function(){
 });
