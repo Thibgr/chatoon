@@ -31,35 +31,44 @@ $('#menulogo').click(function(){
 	});
 });
 
+
 // FUNCTION CHANGE COLOR THEME
 
-$('#color1').click(function(){
-	$('li').removeClass('grey red green blue yellow pink')
-	$('li').addClass('pink')
-	$('body').css("background-color", "#CC00BA")
-	// $('li').css("background-color", "#FF5AF0")
-})
-$('#color2').click(function(){
-	$('body').css("background-color", "#4DC5CC")
-	$('li').css("background-color", "#ACFBFF")
+$("#color1").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
 
-})
-$('#color3').click(function(){
-	$('body').css("background-color", "#46CC4C")
-	$('li').css("background-color", "#A4FFA8")
-})
-$('#color4').click(function(){
-	$('body').css("background-color", "#FFF341")
-	$('li').css("background-color", "#FFF88D")
-})
-$('#color5').click(function(){
-	$('body').css("background-color", "#7F210A")
-	$('li').css("background-color", "#FF8061")
-})
-$('#color6').click(function(){
-	$('body').css("background-color", "#575757")
-	$('li').css("background-color", "#C7C7C7")
-})
+$("#color2").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
+
+$("#color3").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
+
+$("#color4").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
+
+$("#color5").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
+
+$("#color6").click(function(){
+       var previous = $("body").attr("class");
+       var color = $(this).attr("id");
+       $("body").removeClass(previous).addClass(color);
+   })
 
 
 // FUNCTION LOGIN PSEUDO
