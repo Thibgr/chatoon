@@ -98,9 +98,40 @@ main{
 	width: 430px;
 	height: 638px;
 	padding: 20px;
-  float: right;
+    float: right;
+    background-color: white;
+}
+
+.newconnect {
+    text-align: center;
+    background-color: white;
+    font-size: 16px;
+    font-family: 'Lobster';
+    color: #C7C7C7;
+}
+#menu{
+    height: 658px;
+    border-radius: 15px;
+    background: white;
+    margin-right: 20px;
+	width: 140px;
+    background-color: white;
+    float: right;
+    padding: 10px;
+    text-align: center;
+}
+/*
+#info {
+	height: 638px;
+	border-radius: 15px;
+	background: white;
+	width: 120px;
+  min-width: 120px;
+  float: left;
+  margin-right: 14px;
   background-color: white;
 }
+*/
 ul{
 	height : 440px;
 	overflow-x: hidden;
@@ -290,7 +321,7 @@ a:nth-child(2){
   border-radius: 5px;
   margin-left: 3px;
 }#color5{
-  background-color: #7F210A;
+  background-color: #FF8061;
   width: 15px;
   height: 120px;
   border: none;

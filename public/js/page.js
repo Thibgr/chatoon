@@ -1,5 +1,6 @@
 var socket = io('http://localhost:8080');
 var pseudo;
+var i = 0;
 
 // FUNCTION SEND EMOJI
 
@@ -75,6 +76,7 @@ $('#sendpseudo').click(function(){
 	if ($('#pseudo').val() <= 0){
 	}else { 
 		pseudo = $('#pseudo').val();
+		socket.emit('user', pseudo)
 		$('section#connect').hide();
 		$('section#chatcontainer').show();
 	}
@@ -99,6 +101,12 @@ function sendmessage (){
 	$('textarea').val('').focus();
 }
 
+socket.on('user', function(data){
+	var newconnect = 
+	'<p class="newconnect">'+ data + " joined the chat" +'</p>';
+	$('#messages').append(newconnect);
+})
+
 socket.on('response', function(data){
 	$('#messages').scrollTop($('#messages')[0].scrollHeight); // AUTOMATIC SCROLL
 });
@@ -120,7 +128,12 @@ document.getElementById('sendmsg').addEventListener('click', sendmessage)
 document.addEventListener('keydown', function (e){
 	if (e.keyCode === 13 ){
 		event.preventDefault();
-		sendmessage();
-		$('#sendpseudo').click();
+		if (i == 0){
+			$('#sendpseudo').click();
+			++i;
+		}
+		else {
+			sendmessage();
+		}
 	}
 })
