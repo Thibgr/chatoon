@@ -27,5 +27,5 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/views/index.html');
 });
 
-server.listen(1337)
-console.log('server listening on port 1337')
+server.listen(8080)
+console.log('server listening on port 8080')
